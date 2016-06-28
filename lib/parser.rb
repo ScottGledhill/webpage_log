@@ -9,12 +9,17 @@ class Parser
     save_log
     views = log.each {|log| log.slice!(-17..100)}
     output = views.each_with_object(Hash.new(0)){ |m,h| h[m] += 1}.sort_by{ |k,v| v}.reverse
-    output.each {|put| put << "visits"}
+    display = output.each {|put| put << "visits"}
+    display.each {|a| p a.join(" ")}
   end
 
   def display_by_unique_views
     save_log
-    log.uniq
+    unique = log.uniq
+    views = unique.each {|log| log.slice!(-17..100)}
+    output = views.each_with_object(Hash.new(0)){ |m,h| h[m] += 1}.sort_by{ |k,v| v}.reverse
+    display = output.each {|put| put << "Unique Views"}
+    display.each {|a| p a.join(" ")}
   end
 
 private

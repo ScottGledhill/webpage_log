@@ -17,7 +17,7 @@ describe Parser do
     end
 
     it 'can list order by most unique views' do
-      expect(parser.display_by_unique_views).to eq "output"
+      expect(parser.display_by_unique_views).to eq [["/help_page/1", 23, "Unique Views"], ["/index", 23, "Unique Views"], ["/contact", 23, "Unique Views"], ["/home", 23, "Unique Views"], ["/about/2", 22, "Unique Views"], ["/about", 21, "Unique Views"]]
     end
   end
 end
