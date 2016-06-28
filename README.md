@@ -4,8 +4,11 @@ in terminal
 
 Output for most viewed, looks like this:
 
-![Screenshot]
+![Screenshot](https://github.com/ScottGledhill/webpage_log/blob/master/assets/screenshots/most_viewed.png)
 
 Output for most unique views, looks like this:
 
-![Screenshot]
+![Screenshot](https://github.com/ScottGledhill/webpage_log/blob/master/assets/screenshots/unique.png)
+
+-------------
+[Scott Gledhill](https://github.com/ScottGledhill)
