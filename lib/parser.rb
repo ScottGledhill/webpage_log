@@ -10,7 +10,7 @@ class Parser
     views = log.each {|log| log.slice!(-17..100)}
     output = views.each_with_object(Hash.new(0)){ |m,h| h[m] += 1}.sort_by{ |k,v| v}.reverse
     display = output.each {|put| put << "visits"}
-    display.each {|a| p a.join(" ")}
+    display.each {|array| p array.join(" ")}
   end
 
   def display_by_unique_views
@@ -19,10 +19,10 @@ class Parser
     views = unique.each {|log| log.slice!(-17..100)}
     output = views.each_with_object(Hash.new(0)){ |m,h| h[m] += 1}.sort_by{ |k,v| v}.reverse
     display = output.each {|put| put << "Unique Views"}
-    display.each {|a| p a.join(" ")}
+    display.each {|array| p array.join(" ")}
   end
 
-private
+  private
 
   def save_log
     File.open("/Users/ScottGledhill/desktop/projects/webpage_log/lib/webserver.log", "r") do |file_handle|
