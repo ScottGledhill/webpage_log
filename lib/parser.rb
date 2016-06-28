@@ -8,7 +8,13 @@ class Parser
   def display_by_most_views
     save_log
     views = log.each {|log| log.slice!(-17..100)}
-    views.each_with_object(Hash.new(0)){ |m,h| h[m] += 1}.sort_by{ |k,v| v}.reverse
+    output = views.each_with_object(Hash.new(0)){ |m,h| h[m] += 1}.sort_by{ |k,v| v}.reverse
+    output.each {|put| put << "visits"}
+  end
+
+  def display_by_unique_views
+    save_log
+    log.uniq
   end
 
 private
